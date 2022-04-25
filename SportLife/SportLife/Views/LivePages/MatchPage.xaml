@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportLife.Views.LivePages.MatchPage">
+    <ContentPage.Content>
+        <ScrollView>
+        <Grid x:Name="gridContenido">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <BoxView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="12" Grid.RowSpan="7" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Red"/>
+            <!--<BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="12" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="Beige"/>
+            <BoxView Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="12" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="Black"/>
+            <BoxView Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="12" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="Yellow"/>
+            <BoxView Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="12" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="Green"/>
+            <BoxView Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="12" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="Black"/>
+            <BoxView Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="12" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="Brown"/>
+            <BoxView Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="12" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="Red"/>-->
+
+            <BoxView x:Name="CardImg" BackgroundColor="Black" Grid.Column="0" Grid.Row="0" Grid.RowSpan="7" Grid.ColumnSpan="12" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <!--Label minuto/estado-->
+            <!--<BoxView HeightRequest="2" BackgroundColor="Black" Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="Start"></BoxView>
+            <BoxView HeightRequest="2" BackgroundColor="Black" Grid.Column="4" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="StartAndExpand"></BoxView>-->
+            <BoxView BackgroundColor="#DFB651" Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></BoxView>
+            <!--<BoxView HeightRequest="2" BackgroundColor="Black" Grid.Column="4" Grid.Row="0" HorizontalOptions="End" VerticalOptions="StartAndExpand"></BoxView>
+            <BoxView HeightRequest="2" BackgroundColor="Black" Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="End"></BoxView>-->
+            <Label Text="{Binding Partido.estado.ToString}" Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+            <!--Label resultado-->
+            <!--<BoxView HeightRequest="2" BackgroundColor="Black" Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="Start"></BoxView>
+            <BoxView HeightRequest="2" BackgroundColor="Black" Grid.Column="4" Grid.Row="1" Grid.RowSpan="3" HorizontalOptions="Start" VerticalOptions="StartAndExpand"></BoxView>-->
+            <BoxView BackgroundColor="#DFB651" Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></BoxView>
+            <!--<BoxView HeightRequest="2" BackgroundColor="Black" Grid.Column="4" Grid.Row="1" Grid.RowSpan="3" HorizontalOptions="End" VerticalOptions="StartAndExpand"></BoxView>
+            <BoxView HeightRequest="2" BackgroundColor="Black" Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="End"></BoxView>-->
+            <Label Text="{Binding Partido.resultado}" FontSize="36" Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"></Label>
+
+            <!--Label Escudo + Nombre Local-->
+            <!--<BoxView HeightRequest="2" BackgroundColor="#DFB651" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="Start"></BoxView>
+            <BoxView HeightRequest="2" BackgroundColor="#DFB651" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="3" HorizontalOptions="Start" VerticalOptions="StartAndExpand"></BoxView>
+            <BoxView BackgroundColor="Black" Grid.Column="1" Grid.ColumnSpan="3"  Grid.Row="1" Grid.RowSpan="4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></BoxView>
+            <BoxView HeightRequest="2" BackgroundColor="#DFB651" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="3" HorizontalOptions="End" VerticalOptions="StartAndExpand"></BoxView>
+            <BoxView HeightRequest="2" BackgroundColor="#DFB651" Grid.Column="1"  Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="End"></BoxView>-->
+            <Image x:Name="imgLocal" Source="{Binding Partido.localFile}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="3" />
+            <Label Text="{Binding Partido.local}" FontSize="10" LineBreakMode="WordWrap" TextColor="White" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+
+            <!--Label Escudo + Nombre Visitante-->
+            <!--<BoxView HeightRequest="2" BackgroundColor="#DFB651" Grid.Column="8" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="Start"></BoxView>
+            <BoxView HeightRequest="2" BackgroundColor="#DFB651" Grid.Column="8" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="3" HorizontalOptions="Start" VerticalOptions="StartAndExpand"></BoxView>
+            <BoxView BackgroundColor="Black" Grid.Column="8" Grid.ColumnSpan="3"  Grid.Row="1" Grid.RowSpan="4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></BoxView>
+            <BoxView HeightRequest="2" BackgroundColor="#DFB651" Grid.Column="8" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="3" HorizontalOptions="End" VerticalOptions="StartAndExpand"></BoxView>
+            <BoxView HeightRequest="2" BackgroundColor="#DFB651" Grid.Column="8"  Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="End"></BoxView>-->
+            <Image x:Name="imgVisitante"  Source="{Binding Partido.visitanteFile}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="1" Grid.RowSpan="3" Grid.Column="8" Grid.ColumnSpan="3" ></Image>
+            <Label Text="{Binding Partido.visitante}" TextColor="White" LineBreakMode="WordWrap" FontSize="10" Grid.Row="0" Grid.Column="8" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+            <!--Label Competición-->
+            <!--<BoxView HeightRequest="2" BackgroundColor="Black" Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="6" HorizontalOptions="FillAndExpand" VerticalOptions="Start"></BoxView>
+            <BoxView HeightRequest="2" BackgroundColor="Black" Grid.Column="4" Grid.Row="6" HorizontalOptions="Start" VerticalOptions="StartAndExpand"></BoxView>-->
+            <BoxView BackgroundColor="#DFB651" Grid.Column="0" Grid.ColumnSpan="12" Grid.Row="4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></BoxView>
+            <!--<BoxView HeightRequest="2" BackgroundColor="Black" Grid.Column="4" Grid.Row="6" HorizontalOptions="End" VerticalOptions="StartAndExpand"></BoxView>
+            <BoxView HeightRequest="2" BackgroundColor="Black" Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="6" HorizontalOptions="FillAndExpand" VerticalOptions="End"></BoxView>-->
+            <Label Text="{Binding Partido.liga}" Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+            <StackLayout Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="12" BackgroundColor="#DFB651" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" BackgroundColor="#DFB651" >
+                            <Button  BackgroundColor="Transparent" Text="Match" x:Name="btnMatch"></Button>
+                        <Button x:Name="btnEstadísticas" BackgroundColor="Transparent" Text="Estadísticas"></Button>
+                        <Button BackgroundColor="Transparent" Text="H2H"></Button>
+                        <Button BackgroundColor="Transparent" Text="Alineaciones"></Button>
+                        <Button BackgroundColor="Transparent" Text="Clasificación"></Button>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

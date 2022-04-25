@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportLife.Views.HomePage"
+             xmlns:local="clr-namespace:SportLife.Views"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.BarSelectedItemColor="#DFB651"
+            android:TabbedPage.BarItemColor="White"
+            Title="SportLife">
+    
+
+    <TabbedPage.Children>
+        <local:TodoPage Icon="todo.png"></local:TodoPage>
+        <local:LivePage Icon="live.png"></local:LivePage>
+        <local:HotPage Icon="hot.png"></local:HotPage>
+        <local:FavoritsPage Icon="favorits.png"></local:FavoritsPage>
+        <local:SettingPage Icon="settings.png"></local:SettingPage>
+    </TabbedPage.Children>
+</TabbedPage>

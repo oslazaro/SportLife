@@ -1,0 +1,1 @@
+F:\ProyectoMovil\SportLife\SportLife\SportLife.UWP\SportLife.UWP.csproj;x86

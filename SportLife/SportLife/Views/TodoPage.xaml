@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:xf="clr-namespace:BottomBar.XamarinForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportLife.Views.TodoPage"
+             Title="SportLife">
+    <ContentPage.Content>
+        <StackLayout>
+               
+            <ScrollView>
+                <StackLayout>
+                    <Label Text=" &lt; HOY >" FontSize="20" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold" HorizontalTextAlignment="Center" HeightRequest="30" TextColor="Black"/>
+                    <BoxView HeightRequest="1" Color="LightGray" HorizontalOptions="FillAndExpand" VerticalOptions="Center"></BoxView>
+                    <Label Text=" Todos los partidos" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+
+                    <Grid x:Name="gridLigas">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
